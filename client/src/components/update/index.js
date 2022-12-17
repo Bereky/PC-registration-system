@@ -1,15 +1,19 @@
+import NotFound from './NotFound';
+import Header from './Header';
 import Search from './Search';
+import UpdateData from './UpdateData';
 
 const Update = () => {
     return ( 
-        <div className="w-full h-full flex flex-col px-8"> 
-            <div className="w-full h-40 flex flex-col justify-center items-center">
-                <div className="w-full h-12 flex justify-end items-center">
-                    <h1 className="w-full text-3xl font-bold">Update</h1>
-                </div> 
-            </div>
+        <div className="w-full h-auto flex flex-col"> 
+        
+            <Header />
 
-            <Search />
+            {/* <Search /> */}
+
+            {/* <UpdateData /> */}
+
+            {/* <NotFound /> */}
 
         </div>
      );

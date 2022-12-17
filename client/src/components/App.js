@@ -1,10 +1,22 @@
-import Home from "./home";
+import { HomeWrapper} from "./home";
+
+import { BrowserRouter as Router} from "react-router-dom";
+import { Routes, Route} from "react-router-dom";
+
+import { DashboardRoute } from "./dashboard";
+import {ScannerRoute} from "./scanner";
+
 
 const App = () => {
   return (
-    <div className="w-100 ">
-      <Home />
-    </div>
+      <HomeWrapper>
+        <Router>
+          <Routes>
+            <Route index element={<DashboardRoute />} />
+            <Route path="/scanner" element={<ScannerRoute />} />
+          </Routes>
+        </Router>
+      </HomeWrapper>
   );
 }
 
