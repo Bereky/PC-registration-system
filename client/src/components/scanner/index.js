@@ -8,19 +8,18 @@ import TopMenu from '../home/TopMenu';
 import Brand from '../home/Brand';
 import SideNav from '../home/SideNav';
 import LeftWrapper from '../home/LeftWrapper';
+import { useSelector } from 'react-redux';
 
 const Scanner = () => {
+
+    const scan_result = useSelector((state) => state.scanner.current_scan[0] )
+
     return ( 
         <MainWrapper>
             <Header />
             <Search />
             <ChildWrapper>
-                {/* Diplay if found */}
-                <ResultDisplay />
-
-                {/* Error if not found */}
-                {/* <NotFound /> */}
-                
+            { scan_result? <ResultDisplay /> : <NotFound /> }
             </ChildWrapper>
         </MainWrapper> 
      );
