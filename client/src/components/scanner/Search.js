@@ -1,21 +1,29 @@
 import { useState } from "react";
 import { useDispatch } from "react-redux";
-import { scan_pc } from "../../features/scanner/scannerSlice"
+import { scan_pc_fail, scan_pc } from "../../features/scanner/scannerSlice"
+import pcRegistry from "../../utils/pcRegistry";
 
 
 const Search = () => {
 
-    const [searchInput, setSearchInput ] = useState()
+    const [searchInput, setSearchInput ] = useState('')
 
     //const scanned_pc = useSelector((state) => {})
-    //const dispatch = useDispatch()
+    const dispatch = useDispatch()
 
     const performSearch = () => {
-        //dispatch(scan_pc(2))
+        const pc_data = pcRegistry.filter((pc) => pc.id === searchInput)
+
+        if( pc_data.length === 0){
+            dispatch(scan_pc_fail({id: "Ru0369/12"}))
+        }
+        else {
+            dispatch(scan_pc({data: pc_data}))
+        }
     }
 
     const handleInputChange = (e) => {
-        setSearchInput(e.targer.value)
+        setSearchInput(e.target.value)
     }
 
     return ( 
