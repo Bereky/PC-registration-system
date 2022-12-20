@@ -3,6 +3,6 @@ import scannerReducer from './features/scanner/scannerSlice'
 
 export const store = configureStore({
   reducer: {
-    scanned: scannerReducer
+    scanner: scannerReducer
   },
 })
