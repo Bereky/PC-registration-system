@@ -1,10 +1,14 @@
+import { useSelector } from "react-redux";
 import ResultImage from "./ResultImage";
 
 const ResultDisplay = () => {
+
+    const scan_data = useSelector((state) => state.scanner.current_scan)
+
     return ( 
         <div className="bg-slate-100 w-full h-auto flex justify-center items-center flex-row space-x-2 p-2 rounded-md shadow-md">
             
-            <ResultImage />
+            <ResultImage image={scan_data.avatar}/>
             
             <div className=" w-3/5 h-full flex flex-col space-y-3">
                 <div className=" w-full h-4/5 flex flex-col justify-center items-center space-y-2">
@@ -13,7 +17,7 @@ const ResultDisplay = () => {
                             <h1 className="w-full text-lg font-bold">Name</h1>
                         </div>
                         <div className=" w-3/4 h-12 flex justify-center items-center px-2">
-                            <h1 className="w-full text-lg font-bold">Bereket Lemma</h1>
+                            <h1 className="w-full text-lg font-bold">{scan_data.name}</h1>
                         </div>
                     </div>
 
@@ -22,7 +26,7 @@ const ResultDisplay = () => {
                             <h1 className="w-full text-lg font-bold">ID No.</h1>
                         </div>
                         <div className=" w-3/4 h-12 flex justify-center items-center px-2">
-                            <h1 className="w-full text-lg font-bold">RU0369/12</h1>
+                            <h1 className="w-full text-lg font-bold">{scan_data.id}</h1>
                         </div>
                     </div>
 
@@ -31,7 +35,7 @@ const ResultDisplay = () => {
                             <h1 className="w-full text-lg font-bold">Department</h1>
                         </div>
                         <div className=" w-3/4 h-12 flex justify-center items-center px-2">
-                            <h1 className="w-full text-lg font-bold">Computer Science</h1>
+                            <h1 className="w-full text-lg font-bold">{scan_data.department}</h1>
                         </div>
                     </div>
 
@@ -40,7 +44,7 @@ const ResultDisplay = () => {
                             <h1 className="w-full text-lg font-bold">PC Model</h1>
                         </div>
                         <div className=" w-3/4 h-12 flex justify-center items-center px-2">
-                            <h1 className="w-full text-lg font-bold">HP Elitebook 840</h1>
+                            <h1 className="w-full text-lg font-bold">{scan_data.pc_model}</h1>
                         </div>
                     </div>
 
@@ -49,7 +53,7 @@ const ResultDisplay = () => {
                             <h1 className="w-full text-lg font-bold">PC Serial</h1>
                         </div>
                         <div className=" w-3/4 h-12 flex justify-center items-center px-2">
-                            <h1 className="w-full text-lg font-bold">5CG7171RWH</h1>
+                            <h1 className="w-full text-lg font-bold">{scan_data.pc_serial}</h1>
                         </div>
                     </div>
                 </div>
