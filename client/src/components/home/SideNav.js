@@ -8,18 +8,6 @@ import { Link } from 'react-router-dom';
 
 const SideNav = ({route}) => {
     
-    const navElements = ['dashboard', 'scanner', 'registration', 'update', 'setting'];
-
-    const [ path, setPath ] = useState(
-        navElements.map((e) => false)
-    )
-
-    useEffect(() => {
-        const routeIndex = navElements.indexOf(route)
-
-        //setPath(path.map((e, index) => index ))
-    })
-
     return(
         <div className="w-full h-3/4 "> 
             <div className="w-full h-full flex justify-start items-center flex-col"> 
