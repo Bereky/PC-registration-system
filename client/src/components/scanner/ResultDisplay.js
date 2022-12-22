@@ -3,7 +3,7 @@ import ResultImage from "./ResultImage";
 
 const ResultDisplay = () => {
 
-    const scan_data = useSelector((state) => state.scanner.current_scan)
+    const scan_data = useSelector((state) => state.scanner.current_scan[0])
 
     return ( 
         <div className="bg-slate-100 w-full h-auto flex justify-center items-center flex-row space-x-2 p-2 rounded-md shadow-md">
