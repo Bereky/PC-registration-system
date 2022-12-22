@@ -8,7 +8,6 @@ const Search = () => {
 
     const [searchInput, setSearchInput ] = useState('')
 
-    //const scanned_pc = useSelector((state) => {})
     const dispatch = useDispatch()
 
     const performSearch = () => {
