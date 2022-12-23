@@ -45,13 +45,15 @@ const SideNav = ({route}) => {
                     </Link>
                 </div>
 
-                <div className="w-full h-16 flex justify-center items-center flex-row hover:bg-slate-200">
-                    <div className="w-12 h-full  flex justify-center items-center">
-                        <EditIcon />
-                    </div>
-                    <div className="w-2/4 flex justify-start items-center">
-                        <h1 className="w-3/4 text-lg font-bold">Update</h1>
-                    </div>
+                <div className={`w-full h-16 ${route === 'update' && 'bg-slate-200'} flex justify-center items-center flex-row hover:bg-slate-200`}>
+                    <Link to="/update" className='w-full flex justify-center items-center'>
+                        <div className="w-12 h-full  flex justify-center items-center">
+                            <EditIcon />
+                        </div>
+                        <div className="w-2/4 flex justify-start items-center">
+                            <h1 className="w-3/4 text-lg font-bold">Update</h1>
+                        </div>
+                    </Link>
                 </div>
 
                 <div className="w-full h-16 flex justify-center items-center flex-row hover:bg-slate-200">
