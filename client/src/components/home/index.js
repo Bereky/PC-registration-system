@@ -1,8 +1,8 @@
-import Dashboard from "../dashboard";
-import Registration from "../registration";
+import { useSelector } from "react-redux";
+import { Dashboard } from "../dashboard";
+import { Registration } from "../registration";
 import { Scanner } from "../scanner";
-import Setting from "../setting";
-import Update from "../update";
+import { Update } from "../update";
 import Brand from "./Brand";
 
 import LeftWrapper from "./LeftWrapper";
@@ -20,47 +20,29 @@ const HomeWrapper = ({children}) => {
 
 const SideWrapper = ({children}) => {
     return(
-        <div className="w-4/5 bg-slate-100"> 
+        <div className="w-full bg-slate-100"> 
             {children}
-            
-            {/* Top menu */}
-            {/* <TopMenu /> */}
-            {/* Side Display */}
-            
-            {/* Dashboard */}
-            {/* <Dashboard /> */}
-
-            {/* Scanner */}
-            {/* <Scanner /> */}
-            
-            {/* Registration */}
-            {/* <Registration /> */}
-
-            {/* Update */}
-            {/* <Update /> */}
-
-            {/* Setting */}
-            {/* <Setting /> */}
         </div>
     );
 }
 
 const DisplayWrapper = ({children, props, route}) => {
+
+    const sidebarState = useSelector((state) => state.sidebar.collapseState)
+
     return (
         <>
             <LeftWrapper>
-                <Brand />
+                <Brand collapseState={sidebarState}/>
                 <SideNav route={route}/>
             </LeftWrapper>
-            <SideWrapper route={route}>
+            <SideWrapper>
                 <TopMenu />
 
-                {
-                    route === 'scanner'? <Scanner /> : <></> 
-                   /* ( route === 'registration'? <Registration /> : <></> )
-                   ( route === 'update'? <Update /> : <></> )
-                   ( route === 'setting'? <Setting /> : <></> ) */
-                }
+                {route === 'dashboard' && <Dashboard />}
+                {route === 'scanner' && <Scanner />}
+                {route === 'registration' && <Registration />}
+                {route === 'update' && <Update/>}
 
             </SideWrapper>
         </>
