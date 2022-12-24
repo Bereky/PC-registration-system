@@ -11,7 +11,7 @@ const Dashboard = () => {
                 <Header />
                 <Analytics />
 
-                <div className="w-full h-auto flex justify-between items-center flex-row space-x-4 px-5">
+                <div className="w-full h-auto flex justify-between items-center flex-row space-x-4 px-5 ">
                     <Activities />
                     <History />
                 </div>

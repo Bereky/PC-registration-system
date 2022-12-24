@@ -4,7 +4,7 @@ import CancelIcon from '@mui/icons-material/Cancel';
 
 const Analytis = () => {
     return ( 
-        <div className="w-full h-40 flex justify-between items-center flex-row px-5">
+        <div className="w-full h-40 flex justify-between items-center flex-row px-5 border-solid border-b-slate-200 border-b-2">
             <div className="w-72 h-32 bg-blue-400 flex flex-row justify-center items-center rounded-xl shadow-lg">
                 <div className="w-1/2 h-full  flex justify-center items-center">
                     <SearchIcon sx={{'font-size': '90px'}} className="text-3xl p-2 bg-white text-blue-400 rounded-full"/>
