@@ -1,6 +1,7 @@
 import SearchIcon from '@mui/icons-material/Search';
-import VerifiedIcon from '@mui/icons-material/Verified';
-import CancelIcon from '@mui/icons-material/Cancel';
+
+import NorthIcon from '@mui/icons-material/ArrowUpward';
+import SouthIcon from '@mui/icons-material/ArrowDownward';
 
 const Analytis = () => {
     return ( 
@@ -16,20 +17,20 @@ const Analytis = () => {
             </div>
             <div className="w-72 h-32 bg-green-400 flex flex-row justify-center items-center rounded-xl shadow-lg">
                 <div className="w-1/2 h-full  flex justify-center items-center">
-                    <VerifiedIcon sx={{'font-size': '100px'}} className="text-3xl text-white rounded-full"/>
+                    <SouthIcon sx={{'font-size': '90px'}} className=" text-green-400 rounded-full bg-white"/>
                 </div>
                 <div className="w-1/2 h-32 flex justify-center items-center flex-col space-y-4 text-white">
-                    <h1 className="w-3/4 text-md font-bold">Total Verified</h1>
-                    <h1 className="w-3/4 text-5xl font-bold">71</h1>
+                    <h1 className="w-5/6 text-md font-bold">Entered campus</h1>
+                    <h1 className="w-3/4 text-5xl font-bold">41</h1>
                 </div>
             </div>
             <div className="w-72 h-32 bg-red-400 flex flex-row justify-center items-center rounded-xl shadow-lg">
                 <div className="w-1/2 h-full  flex justify-center items-center">
-                    <CancelIcon sx={{'font-size': '100px'}} className="text-3xl text-white  rounded-full"/>
+                    <NorthIcon sx={{'font-size': '90px'}} className="text-red-400 bg-white rounded-full"/>
                 </div>
                 <div className="w-1/2 h-32 flex justify-center items-center flex-col space-y-4 text-white">
-                    <h1 className="w-3/4 text-md font-bold">Total Rejected</h1>
-                    <h1 className="w-3/4 text-5xl font-bold">5</h1>
+                    <h1 className="w-5/6 text-md font-bold">Exited campus</h1>
+                    <h1 className="w-3/4 text-5xl font-bold">35</h1>
                 </div>
             </div>
         </div>
