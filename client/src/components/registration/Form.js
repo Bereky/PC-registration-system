@@ -1,55 +1,173 @@
-const Form = () => {
-    return ( 
+import { useState } from "react";
+
+const Tab = ({changeMe}) => {
+
+    const [ tabState, setTabState ] = useState(true);
+
+    const changeTab = (e) => {
+        setTabState(e)
+        //console.log(e)
+        changeMe(tabState)
+    }
+
+    return (
+        <div className="bg-slate-300 w-full h-auto flex justify-start items-start flex-col rounded-t-md mt-3 shadow-md border-solid border-b-grey-100 border-b-2">
+            <div className="tabs">
+                <div className={`tab tab-lifted h-10 text-lg text-black ${tabState && 'tab-active'}`} onClick={() => changeTab(true)}>Student</div>
+                <div className={`tab tab-lifted h-10 text-lg ${!tabState && 'tab-active'}`} onClick={() => changeTab(false)}>Agent</div>
+            </div>
+        </div> 
+    );
+}
+
+const Wrapper = ({children}) => {
+    return (
         <div className="w-full h-auto flex justify-start items-start flex-col mb-4 px-5">
+            {children}
+        </div>
+    );
+}
+
+const Form = () => {
+
+    const change = (state) => {
+        console.log(state)
+    }
+
+    return(
+        <Wrapper>                
+            <Tab changeMe={change}/>
+
+            <div className=" w-full h-auto flex justify-center items-center flex-col bg-slate-200 rounded-b-md shadow-md">
                 
-            <div className="bg-slate-200 w-full h-16 flex justify-center items-center rounded-t-md my-3">
-                <h1 className="text-3xl font-bold">Register new PC</h1>
-            </div> 
-
-            <div className=" w-full h-auto flex justify-center items-center flex-col pt-1 bg-slate-200 rounded-b-md shadow-md">
-                
-                <form className=" w-full h-auto flex justify-center items-center flex-col pt-5 bg-slate-200 rounded-b-md shadow-md">
-                    <div className=" w-full h-20 flex justify-center items-center flex-row space-x-2">
-                        <div className=" w-1/2 h-20 flex justify-start items-center ml-10">
-                            <label className="text-lg font-bold w-1/4">First name</label>
-                            <input type="search"  className="bg-slate-100 w-3/5 mx-2 h-12 px-4 text-lg flex justify-start items-center outline outline-2 outline-slate-300 rounded-md focus:outline-none" />
+                <form className=" w-full h-auto flex justify-center items-center flex-col bg-slate-200 rounded-b-md space-y-3">
+                    <div className=" w-full h-16 flex justify-start items-center pl-5 flex-row bg-slate-300 relative">
+                        <div className=" w-1/4 h-full flex justify-start items-center absolute">
+                            <h3 className="text-lg font-bold">Register student</h3>
                         </div>
-                        <div className=" w-1/2 h-20 flex justify-start items-center ml-10">
-                            <label className="text-lg font-bold w-1/4">Last name</label>
-                            <input type="search"  className="bg-slate-100 w-3/5 mx-2 h-12 px-4 text-lg flex justify-start items-center outline outline-2 outline-slate-300 rounded-md focus:outline-none" />
+
+                        <div className=" w-full h-full flex justify-center items-center pl-5">
+                            <ul className="steps steps-secondary w-1/2">
+                                <li className="step step-neutral text-sm">Basic info</li>
+                                <li className="step text-sm">Upload photo</li>
+                                <li className="step text-sm">Finish</li>
+                            </ul>
                         </div>
                     </div>
 
-                    <div className=" w-full h-20 flex justify-center items-center flex-row space-x-2">
-                        <div className=" w-1/2 h-20 flex justify-start items-center ml-10">
-                            <label className="text-lg font-bold w-1/4">Department:</label>
-                            <input type="search"  className="bg-slate-100 w-3/5 mx-2 h-12 px-4 text-lg flex justify-start items-center outline outline-2 outline-slate-300 rounded-md focus:outline-none" />
+                    <div className=" w-full h-20 flex justify-between items-center space-x-5 px-5 ">
+                        <div className=" w-1/4 flex justify-center items-center">
+                            <div className="form-control w-full ">
+                                <label className="label">
+                                    <span className="label-text">First name <span className="text-red">*</span></span>
+                                </label>
+                                <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                            </div>
                         </div>
-                        <div className=" w-1/2 h-20 flex justify-start items-center ml-10">
-                            <label className="text-lg font-bold w-1/4">Student ID:</label>
-                            <input type="search"  className="bg-slate-100 w-3/5 mx-2 h-12 px-4 text-lg flex justify-start items-center outline outline-2 outline-slate-300 rounded-md focus:outline-none" />
+
+                        <div className=" w-1/4 flex justify-center items-center ">
+                            <div className="form-control w-full ">
+                                <label className="label">
+                                    <span className="label-text">Last name <span className="text-red">*</span></span>
+                                </label>
+                                
+                                <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                            </div>
+                        </div>
+
+                        <div className=" w-1/4 flex justify-center items-center ">
+                            <div className="form-control w-full ">
+                                <label className="label">
+                                    <span className="label-text">Gender</span>
+                                </label>
+                                <select className="select w-full">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
 
-                    <div className=" w-full h-20 flex justify-center items-center flex-row space-x-2">
-                        <div className=" w-1/2 h-20 flex justify-start items-center ml-10">
-                            <label className="text-lg font-bold w-1/4">PC Model</label>
-                            <input type="search"  className="bg-slate-100 w-3/5 mx-2 h-12 px-4 text-lg flex justify-start items-center outline outline-2 outline-slate-300 rounded-md focus:outline-none" />
+                    <div className=" w-full h-20 flex justify-between items-center space-x-5 px-5">
+                        <div className=" w-1/4 flex justify-center items-center ">
+                            <div className="form-control w-full ">
+                                <label className="label">
+                                    <span className="label-text">ID No.</span>
+                                </label>
+                                <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                            </div>
                         </div>
-                        <div className=" w-1/2 h-20 flex justify-start items-center ml-10">
-                            <label className="text-lg font-bold w-1/4">PC Serial no.</label>
-                            <input type="search"  className="bg-slate-100 w-3/5 mx-2 h-12 px-4 text-lg flex justify-start items-center outline outline-2 outline-slate-300 rounded-md focus:outline-none" />
+
+                        <div className=" w-1/4 flex justify-center items-center ">
+                            <div className="form-control w-full ">
+                                <label className="label">
+                                    <span className="label-text">Department</span>
+                                </label>
+                                <select className="select w-full">
+                                    <option>Computer Science</option>
+                                    <option>Information Science</option>
+                                    <option>Information Technology</option>
+                                    <option>Chemical Engineering</option>
+                                    <option>Civil Engineering</option>
+                                    <option>Electrical Engineering</option>
+                                    <option>Architectural Engineering</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className=" w-1/4 flex justify-center items-center ">
+                            <div className="form-control w-full ">
+                                <label className="label">
+                                    <span className="label-text">Phone</span>
+                                </label>
+                                <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                            </div>
                         </div>
                     </div>
 
-                    <div className="w-full h-28 flex justify-start items-center">
-                        <div className="w-1/4 h-full flex justify-start items-center ml-10">
-                            <button className="bg-blue-400 w-full h-12 px-4 text-xl flex justify-center items-center rounded-md hover:bg-blue-200" >Register</button>
+                    <div className=" w-full h-20 flex justify-between items-center space-x-5 px-5">
+                        <div className=" w-1/4 flex justify-center items-center ">
+                            <div className="form-control w-full ">
+                                <label className="label">
+                                    <span className="label-text">PC manufacturer</span>
+                                </label>
+                                <select className="select w-full">
+                                    <option>HP</option>
+                                    <option>Lenovo</option>
+                                    <option>Dell</option>
+                                    <option>Toshiba</option>
+                                    <option>Other</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div className=" w-1/4 flex justify-center items-center ">
+                            <div className="form-control w-full ">
+                                <label className="label">
+                                    <span className="label-text">PC model</span>
+                                </label>
+                                <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                            </div>
+                        </div>
+
+                        <div className=" w-1/4 flex justify-center items-center ">
+                            <div className="form-control w-full ">
+                                <label className="label">
+                                    <span className="label-text">PC serial No.</span>
+                                </label>
+                                <input type="text" placeholder="Type here" className="input input-bordered w-full max-w-xs" />
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="w-full h-16 flex justify-end items-center">
+                        <div className="w-1/4 h-full flex justify-end items-center mr-5">
+                            <button className="w-1/2 h-10 btn text-lg capitalize" >Next</button>
                         </div>
                     </div>
                 </form>
             </div>
-        </div>
+        </Wrapper>
      );
 }
  
