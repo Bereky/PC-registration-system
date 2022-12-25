@@ -63,10 +63,10 @@ const ResultDisplay = () => {
 
                 <div className="w-full h-1/5 flex flex-row justify-between items-center p-2">
                     <div className="w-1/2 h-full flex flex-row justify-start items-center px-2">
-                        <button className="btn capitalize border-none bg-green-400 w-5/6 h-10 px-4 text-xl flex justify-center items-center rounded-md hover:bg-green-300" >Verify</button>
+                        <button className="btn btn-sm capitalize border-none bg-green-400 w-3/6 h-10 px-4 text-xl flex justify-center items-center rounded-md hover:bg-green-300" >Enter</button>
                     </div>
                     <div className="w-1/2 h-full flex flex-row justify-end items-center px-2">
-                        <button className="btn capitalize border-none bg-red-400 w-5/6 h-10 px-4 text-xl flex justify-center items-center rounded-md hover:bg-red-300" >Reject</button>
+                        <button className="btn btn-sm capitalize border-none bg-red-400 w-3/6 h-10 px-4 text-xl flex justify-center items-center rounded-md hover:bg-red-300" >Exit</button>
                     </div>
                 </div>
             </div>
