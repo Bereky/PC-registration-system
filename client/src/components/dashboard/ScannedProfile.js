@@ -1,5 +1,5 @@
-import VerifiedIcon from '@mui/icons-material/Verified';
-import CancelIcon from '@mui/icons-material/Cancel';
+import NorthIcon from '@mui/icons-material/ArrowUpward';
+import SouthIcon from '@mui/icons-material/ArrowDownward';
 
 const ScannedProfile = (props) => {
     
@@ -21,7 +21,7 @@ const ScannedProfile = (props) => {
             </div>
             <div className="w-1/6 h-16 flex justify-center items-center px-3 rounded-md flex-row space-x-2">
                 {
-                    props.profileData.verified? <VerifiedIcon sx={{'font-size': '30px'}} className=" text-green-400 rounded-full"/> : <CancelIcon sx={{'font-size': '30px'}} className=" text-red-400 rounded-full"/>
+                    props.profileData.verified? <SouthIcon sx={{'font-size': '30px'}} className=" text-green-400 rounded-full"/> : <NorthIcon sx={{'font-size': '30px'}} className=" text-red-400 rounded-full"/>
                 }
                 
             </div>
