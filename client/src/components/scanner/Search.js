@@ -28,19 +28,19 @@ const Search = () => {
     }
 
     return ( 
-            <form onSubmit={performSearch}>
-                <div className=" w-full h-24 px-5 flex justify-center items-center">
-                    <div onSubmit={performSearch} className="w-full h-16 flex justify- items-center bg-slate-200  rounded-md">
-                        <div className="w-10/12 h-full flex justify-center items-center pl-3 ">
-                            <input value={searchInput} onChange={handleInputChange} type="search" placeholder="Enter student ID" className="input input-bordered w-full h-11" />
-                        </div>
-
-                        <div className="w-2/12 h-full flex justify-center items-center px-3">
-                            <button type="submit" className="text-white w-full text-lg btn" >Scan</button>
-                        </div>
+        <div className=" w-full h-20 flex justify-center items-center">
+            <div className="w-full h-16 flex justify- items-center bg-slate-200  rounded-md ">
+                <form onSubmit={performSearch} className="w-full h-16 flex justify- items-center bg-slate-200  rounded-md">
+                    <div className="w-10/12 h-full flex justify-center items-center pl-3 ">
+                        <input value={searchInput} onChange={handleInputChange} type="search" placeholder="Enter student ID" className="input input-bordered w-full h-11" />
                     </div>
-                </div>
-            </form>
+
+                    <div className="w-2/12 h-full flex justify-center items-center px-3">
+                        <button type="submit" className="text-white w-full text-lg btn" >Scan</button>
+                    </div>
+                </form>
+            </div>
+        </div>
      );
 }
  
