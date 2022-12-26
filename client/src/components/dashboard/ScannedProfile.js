@@ -4,7 +4,7 @@ import SouthIcon from '@mui/icons-material/ArrowDownward';
 const ScannedProfile = (props) => {
     
     return ( 
-        <div className="w-full h-16 flex justify-start items-center mx-3 bg-slate-100 rounded-md space-x-1 outline outline-2 outline-slate-200">
+        <div className="w-full h-16 flex justify-start items-center mx-3 bg-slate-100 rounded-md space-x-1 outline outline-2 outline-slate-200 hover:bg-slate-50">
             <div className="w-auto h-16 flex justify-center items-center px-3  rounded-md">
                 <div className="w-12 h-12 flex justify-start items-center bg-amber-500 rounded-full">
                     <img src={props.profileData.photo} alt="" className="rounded-full w-full"/>
