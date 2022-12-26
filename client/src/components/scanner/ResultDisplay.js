@@ -6,7 +6,7 @@ const ResultDisplay = () => {
     const scan_data = useSelector((state) => state.scanner.current_scan[0])
 
     return ( 
-        <div className="bg-slate-100 w-full h-auto flex justify-center items-center flex-row space-x-3 p-2 rounded-md my-4">
+        <div className="bg-slate-100 w-full h-auto flex justify-center items-center flex-row space-x-3 p-2 rounded-md my-3">
             
             <ResultImage image={scan_data.avatar}/>
             
@@ -22,7 +22,7 @@ const ResultDisplay = () => {
                     </div>
                 </div>
                 
-                <div className=" w-full h-auto flex flex-col justify-ce items-center space-y-2">
+                <div className=" w-full h-auto flex flex-col justify-ce items-center space-y-1">
 
                     <div className=" w-full h-8 flex flex-row px-2 space-x-2">
                         <div className="w-1/4 h-full flex justify-center items-center px-2">
