@@ -6,13 +6,13 @@ const ResultDisplay = () => {
     const scan_data = useSelector((state) => state.scanner.current_scan[0])
 
     return ( 
-        <div className="bg-slate-100 w-full h-auto flex justify-center items-center flex-row space-x-2 p-2 rounded-md shadow-md">
+        <div className="bg-slate-100 w-full h-auto flex justify-center items-center flex-row space-x-3 p-2 rounded-md my-4">
             
             <ResultImage image={scan_data.avatar}/>
             
             <div className=" w-3/5 h-full flex flex-col space-y-3 justify-between">
                 <div className=" w-full h-4/5 flex flex-col justify-ce items-center space-y-2">
-                    <div className=" w-full h-24 flex flex-col px-2 bg-slate-00">
+                    <div className=" w-full h-20 flex flex-col px-2 bg-slate-00">
                         <div className="w-full h-10 flex justify-center items-center px-2">
                             <h1 className="w-full text-3xl font-bold">{scan_data.name}</h1>
                         </div>
@@ -22,7 +22,7 @@ const ResultDisplay = () => {
                     </div>
                 </div>
                 
-                <div className=" w-full h-4/5 flex flex-col justify-ce items-center space-y-2">
+                <div className=" w-full h-auto flex flex-col justify-ce items-center space-y-2">
 
                     <div className=" w-full h-8 flex flex-row px-2 space-x-2">
                         <div className="w-1/4 h-full flex justify-center items-center px-2">
@@ -61,7 +61,7 @@ const ResultDisplay = () => {
                     </div>
                 </div>
 
-                <div className="w-full h-1/5 flex flex-row justify-between items-center p-2">
+                <div className="w-full h-1/6 flex flex-row justify-between items-center p-2">
                     <div className="w-1/2 h-full flex flex-row justify-start items-center px-2">
                         <button className="btn btn-sm capitalize border-none bg-green-400 w-3/6 h-10 px-4 text-xl flex justify-center items-center rounded-md hover:bg-green-300" >Enter</button>
                     </div>
