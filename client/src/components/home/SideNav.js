@@ -25,10 +25,10 @@ const SideNav = ({route}) => {
         <div className={`${sidebarState? 'w-20' : 'w-60'} h-3/4 flex flex-col space-y-2 justify-between`}> 
             <div className="w-full h-5/6 flex justify-start items-center flex-col mt-3 "> 
                 
-                <div className='w-full h-14 flex justify-center items-center'>
-                    <div className={`h-11 rounded-lg ${ route === 'dashboard' && 'bg-slate-200'} ${sidebarState? 'w-4/6' : 'w-5/6'} flex justify-center items-center flex-row hover:bg-slate-200`}>
+                <div className='w-full h-14 flex justify-center items-center '>
+                    <div className={`h-11 rounded-lg ${ route === 'dashboard' && 'bg-slate-200 '} ${sidebarState? 'w-4/6' : 'w-5/6'} flex justify-center items-center flex-row hover:bg-slate-200`}>
                         <Link to="/" className='w-full flex justify-center items-center'>
-                            <div className="w-12 h-full  flex justify-center items-center">
+                            <div className={`w-12 h-full  flex justify-center items-center`}>
                                 <GridViewIcon />
                             </div>
                             <div className={`w-2/4 flex justify-start items-center ${sidebarState? 'hidden' : 'flex'}`}>
@@ -41,7 +41,7 @@ const SideNav = ({route}) => {
                 <div className='w-full h-14 flex justify-center items-center'>
                     <div className={`h-11 rounded-lg ${ route === 'scanner' && 'bg-slate-200'} ${sidebarState? 'w-4/6' : 'w-5/6'} flex justify-center items-center flex-row hover:bg-slate-200`}>
                         <Link to="/scanner" className='w-full flex justify-center items-center'>
-                            <div className="w-12 h-full  flex justify-center items-center">
+                            <div className={`w-12 h-full  flex justify-center items-center `}>
                                 <SearchIcon />
                             </div>
                             <div className={`w-2/4 flex justify-start items-center ${sidebarState? 'hidden' : 'flex'}`}>
@@ -51,7 +51,6 @@ const SideNav = ({route}) => {
                     </div>
                 </div>
 
-                
 
                 <div className='w-full h-14 flex justify-center items-center'>
                     <div className={`h-11 rounded-lg ${ route === 'registration' && 'bg-slate-200'} ${sidebarState? 'w-4/6' : 'w-5/6'} flex justify-center items-center flex-row hover:bg-slate-200`}>
@@ -73,7 +72,7 @@ const SideNav = ({route}) => {
                                 <EditIcon />
                             </div>
                             <div className={`w-2/4 flex justify-start items-center ${sidebarState? 'hidden' : 'flex'}`}>
-                                <h1 className="w-3/4 text-md font-bold">Update</h1>
+                                <h1 className="w-3/4 text-md font-bold">Manage</h1>
                             </div>
                         </Link>
                     </div>
