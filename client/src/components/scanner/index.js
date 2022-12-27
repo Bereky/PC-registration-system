@@ -23,7 +23,7 @@ const  sampleProfile = {
 
 const Scanner = () => {
 
-    const [ tab, setTab ] = useState();
+    const [ tab, setTab ] = useState(true);
 
     const change = (state) => {
         setTab(state)
@@ -70,7 +70,6 @@ const ScanProfile = (props) => {
                 {
                     props.profileData.verified? <SouthIcon sx={{'font-size': '30px'}} className=" text-green-400 rounded-full"/> : <NorthIcon sx={{'font-size': '30px'}} className=" text-red-400 rounded-full"/>
                 }
-                
             </div>
         </div>
     );
