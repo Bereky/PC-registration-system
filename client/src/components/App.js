@@ -12,6 +12,7 @@ const App = () => {
             <Route path="/scanner" element={<DisplayWrapper route='scanner' />} />
             <Route path="/registration" element={<DisplayWrapper route='registration'/>} />
             <Route path="/update" element={<DisplayWrapper route='update'/>} />
+            <Route path="/report" element={<DisplayWrapper route='report'/>} />
           </Routes>
         </Router>
       </HomeWrapper>
