@@ -1,6 +1,7 @@
 import { useSelector } from "react-redux";
 import { Dashboard } from "../dashboard";
 import { Registration } from "../registration";
+import { Report } from "../report";
 import { Scanner } from "../scanner";
 import { Update } from "../update";
 import Brand from "./Brand";
@@ -43,6 +44,7 @@ const DisplayWrapper = ({children, props, route}) => {
                 {route === 'scanner' && <Scanner />}
                 {route === 'registration' && <Registration />}
                 {route === 'update' && <Update/>}
+                {route === 'report' && <Report />}
 
             </SideWrapper>
         </>
