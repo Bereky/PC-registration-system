@@ -79,8 +79,8 @@ const SideNav = ({route}) => {
                 </div>
 
                 <div className='w-full h-14 flex justify-center items-center'>
-                    <div className={`h-11 rounded-lg ${ route === 'setting' && 'bg-slate-200'}  ${sidebarState? 'w-4/6' : 'w-5/6'} flex justify-center items-center flex-row hover:bg-slate-200`}>
-                        <Link to="/" className='w-full flex justify-center items-center'>
+                    <div className={`h-11 rounded-lg ${ route === 'report' && 'bg-slate-200'}  ${sidebarState? 'w-4/6' : 'w-5/6'} flex justify-center items-center flex-row hover:bg-slate-200`}>
+                        <Link to="/report" className='w-full flex justify-center items-center'>
                             <div className="w-12 h-full flex justify-center items-center">
                                 <ReportIcon />
                             </div>
