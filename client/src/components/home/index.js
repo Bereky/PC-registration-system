@@ -3,6 +3,7 @@ import { Dashboard } from "../dashboard";
 import { Registration } from "../registration";
 import { Report } from "../report";
 import { Scanner } from "../scanner";
+import Setting from "../setting";
 import { Update } from "../update";
 import Brand from "./Brand";
 
@@ -45,6 +46,7 @@ const DisplayWrapper = ({children, props, route}) => {
                 {route === 'registration' && <Registration />}
                 {route === 'update' && <Update/>}
                 {route === 'report' && <Report />}
+                {route === 'setting' && <Setting />}
 
             </SideWrapper>
         </>
