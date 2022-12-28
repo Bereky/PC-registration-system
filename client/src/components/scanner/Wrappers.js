@@ -8,7 +8,7 @@ const MainWrapper = ({children}) => {
 
 const ChildWrapper = ({children}) => {
     return ( 
-        <div className=" w-full h-auto flex justify-start items-center my-3 px-5">
+        <div className=" w-full h-auto flex justify-start items-center px-3">
             {children}
         </div>
      );
