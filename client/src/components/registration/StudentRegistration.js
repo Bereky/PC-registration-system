@@ -19,7 +19,7 @@ const StudentRegistration = () => {
                     <ul className="steps steps-secondary w-1/2">
                         <li className={`step step-neutral text-sm ${step >= 1 && ''}`}>Step 1</li>
                         <li className={`step text-sm ${step >= 2 && 'step-neutral'}`}>Step 2</li>
-                        <li className={`step text-sm ${step == 3 && 'step-neutral'}`}>Finish</li>
+                        <li className={`step text-sm ${step === 3 && 'step-neutral'}`}>Finish</li>
                     </ul>
                 </div>
             </div>
