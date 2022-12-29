@@ -13,11 +13,11 @@ const TopMenu = () => {
                         </div> 
                     </div>
 
-                    <div className="dropdown dropdown-bottom dropdown-end ">
+                    <div className="dropdown dropdown-bottom dropdown-end py-2">
                         <label tabIndex={0} className="w-36 text-md h-12 cursor-pointer">Abera - adminstrator<span><ArrowDropDownIcon /></span></label>
-                        <ul tabIndex={0} className="dropdown-content p-2 menu shadow bg-base-100 rounded-box w-48">
-                            <li><a><SettingsIcon /> Setting</a></li>
-                            <li><a><LogoutIcon /> Log out </a></li>
+                        <ul tabIndex={0} className="dropdown-content p-2 menu shadow bg-base-100 rounded-box w-52 mt-1">
+                            <li><div><SettingsIcon /> Setting</div></li>
+                            <li><div><LogoutIcon /> Log out </div></li>
                         </ul>
                     </div> 
                 </div>
