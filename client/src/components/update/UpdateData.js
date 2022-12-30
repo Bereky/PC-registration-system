@@ -1,6 +1,5 @@
 import { useState } from "react";
 import SearchIcon from '@mui/icons-material/Search';
-import SortIcon from '@mui/icons-material/Sort';
 
 const UpdateStudentData = () => {
     return ( 
@@ -110,10 +109,6 @@ const UpdateStudentTab = () => {
     return (
         <div className="w-full h-auto flex justify-center items-center space-y-2 flex-col ">
             <div className=" w-full h-16 flex justify-end items-center flex-row px-3 bg-slate-300">
-                {/* <div className=" w-1/2 h-16 flex justify-start items-center ">
-                    <h3 className="text-lg font-bold">Scan history</h3>
-                </div> */}
-
                 <div className="w-1/4 h-16 flex justify- items-center rounded-md ">
                     <form /* onSubmit={performSearch} */ className="w-full h-16 flex justify- items-center rounded-md">
                         <div className="w-full h-full flex justify-center items-center pl-3 relative bg space-x-1">
