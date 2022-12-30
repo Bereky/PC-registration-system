@@ -12,9 +12,9 @@ const Update = () => {
             
                 <Header />
 
-                <Search />
+                {/* <Search /> */}
 
-                {/* <UpdateData /> */}
+                <UpdateData />
 
                 {/* <NotFound /> */}
 
@@ -22,6 +22,8 @@ const Update = () => {
         </SideWrapper>
      );
 }
+
+
 
  
 export { Update };
