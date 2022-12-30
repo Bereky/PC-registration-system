@@ -10,7 +10,6 @@ import { useState } from 'react';
 import NorthIcon from '@mui/icons-material/ArrowUpward';
 import SouthIcon from '@mui/icons-material/ArrowDownward';
 import SortIcon from '@mui/icons-material/Sort';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import SearchIcon from '@mui/icons-material/Search';
 
 const  sampleProfile = {
