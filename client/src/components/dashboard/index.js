@@ -11,13 +11,21 @@ const Dashboard = () => {
                 <Header />
                 <Analytics />
 
-                <div className="w-full h-auto flex justify-between items-center flex-row space-x-4 px-5 ">
+                <InnerWrapper>
                     <Activities />
                     <History />
-                </div>
+                </InnerWrapper>
             </div>
         </SideWrapper> 
      );
+}
+
+const InnerWrapper = ({children}) => {
+    return (
+        <div className="w-full h-auto flex justify-between items-center flex-row space-x-4 px-5 ">
+            {children}
+        </div>
+    );
 }
 
  
